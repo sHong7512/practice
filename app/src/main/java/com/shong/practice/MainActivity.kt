@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         return super.findViewById(id)
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.button2 -> {
                 val intent = Intent(this,Ex_foregroundService::class.java)
-//                startForegroundService(intent)
+                startForegroundService(intent)
             }
             R.id.button3 -> {
                 val intent = Intent(this,Ex_foregroundService::class.java)
