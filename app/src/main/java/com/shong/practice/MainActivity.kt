@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.button2 -> {
                 val intent = Intent(this,Ex_foregroundService::class.java)
-//                startForegroundService(intent)
+                startForegroundService(intent)
             }
             R.id.button3 -> {
                 val intent = Intent(this,Ex_foregroundService::class.java)
