@@ -42,4 +42,17 @@
         android:layout_height="wrap_content"
         android:text="start_Ex_fragment" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create inflate" />
+
+    <LinearLayout
+        android:id="@+id/inflateLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
 </LinearLayout>

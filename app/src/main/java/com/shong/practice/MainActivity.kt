@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import kotlinx.coroutines.*
 
@@ -17,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG,"findViewById : ${id}")
         return super.findViewById(id)
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         btn3.setOnClickListener {onClick(btn3)}
         val btn4 : Button = findViewById(R.id.button4)
         btn4.setOnClickListener {onClick(btn4)}
+        val btn5 : Button = findViewById(R.id.button5)
+        btn5.setOnClickListener {onClick(btn5)}
 
 
         Log.d(TAG, "${ex_Lambda(1,2)}")
@@ -88,6 +90,10 @@ class MainActivity : AppCompatActivity() {
             R.id.button4 ->{
                 val intent = Intent(this,Ex_fragment::class.java)
                 startActivity(intent)
+            }
+            R.id.button5 ->{
+                val inflater = LayoutInflater.from(this)
+                inflater.inflate(R.layout.item_dot,findViewById<LinearLayout>(R.id.inflateLinearLayout),true)
             }
             else -> {
                 // else condition
